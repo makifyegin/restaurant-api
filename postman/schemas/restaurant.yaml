@@ -4,7 +4,7 @@ info:
     title: "Restaurant API"
     description: An API description
 servers:
-    - url: "https://15aba9cf-b3d5-4365-a38c-e722f2ae0e52.mock.pstmn.io"
+    - url: "https://3e612ca9-71ed-4302-9e59-efd39149a39c.mock.pstmn.io"
 paths:
     /restaurant:
         get:
@@ -37,7 +37,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Restaurants"
+                                $ref: "#/components/schemas/Restaurant"
                 "500":
                     description: "Errors"
                     content:
