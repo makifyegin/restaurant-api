@@ -29,6 +29,13 @@ paths:
         post:
             summary: "Add a Restaurant"
             operationId: addRestaurant
+            requestBody:
+                required: true
+                description: The restaurant to add.
+                content:
+                  application/json:
+                    schema:
+                      $ref: "#/components/schemas/Restaurant"                
             tags:
                 - Restaurants
             responses:
