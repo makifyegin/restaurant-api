@@ -76,7 +76,62 @@ paths:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/Restaurants"
-
+        put:
+            summary: "Update a Restaurant"
+            operationId: updateRestaurant
+            parameters:
+                - name: id
+                  in: path
+                  description: The unique id.
+                  required: true
+                  schema:
+                      type: string
+            requestBody:
+                required: true
+                description: Update Restaurant.
+                content:
+                  application/json:
+                    schema:
+                      $ref: "#/components/schemas/Restaurant"                
+            tags:
+                - Restaurants
+            responses:
+                "204":
+                    description: "Add a restaurant"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Restaurant"
+                "500":
+                    description: "Errors"
+        put:
+            summary: "Updte a Restaurant"
+            operationId: updateRestaurant
+            parameters:
+                - name: id
+                  in: path
+                  description: The unique id.
+                  required: true
+                  schema:
+                      type: string
+            requestBody:
+                required: true
+                description: Update Restaurant.
+                content:
+                  application/json:
+                    schema:
+                      $ref: "#/components/schemas/Restaurant"                
+            tags:
+                - Restaurants
+            responses:
+                "204":
+                    description: "Add a restaurant"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Restaurant"
+                "500":
+                    description: "Errors"
 components:
     schemas:
         Restaurants:
