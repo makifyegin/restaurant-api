@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "03889e51-b75c-43be-ad60-1843b46905bc",
+		"name": "Restaurant API",
+		"description": "An API description",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "List of Restaurans",
+					"id": "34b649fb-e31b-4819-aacc-e649da88358f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/restaurant",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"restaurant"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "11b6df60-3492-42b0-9c6c-d151a8a85911",
+							"name": "List of Restaurants",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-Api-Key",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/restaurant",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"restaurant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"id\": \"consequat nostrud ea cupidatat ut\",\n    \"name\": \"pariatur sed dolor\",\n    \"cuisine\": \"ut velit\"\n  },\n  {\n    \"id\": \"laborum cupidatat nostrud\",\n    \"name\": \"id commodo magna enim Lorem\",\n    \"cuisine\": \"et sint amet aliqua\"\n  }\n]"
+						},
+						{
+							"id": "2d574ccb-7638-44df-bd73-b72ff505b228",
+							"name": "Errors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-Api-Key",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/restaurant",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"restaurant"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"id\": \"Ut al\",\n    \"name\": \"aute\",\n    \"cuisine\": \"sunt eiusmod\"\n  },\n  {\n    \"id\": \"eu sed\",\n    \"name\": \"ut labore\",\n    \"cuisine\": \"sit nulla id amet\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add a Restaurant",
+					"id": "ab5f36c9-b630-42a9-89be-a35d2b7fc309",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"abc8910\",\n    \"name\": \"KFC\",\n    \"cuisine\": \"Chicken\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/restaurant",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"restaurant"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "9f0aacaf-1ab9-407e-9f06-388581687262",
+							"name": "Add a restaurant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-Api-Key",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/restaurant",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"restaurant"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"id\": \"abc8910\",\n \"name\": \"KFC\",\n \"cuisine\": \"Chicken\"\n}"
+						},
+						{
+							"id": "1a6b8cd3-5485-4d25-ad73-0f0dfd92e192",
+							"name": "Errors",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-Api-Key",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/restaurant",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"restaurant"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": \"nostrud dolor Lorem\",\n  \"name\": \"magna voluptate Duis dolore\",\n  \"cuisine\": \"mollit amet Ut\"\n}"
+						}
+					]
+				}
+			],
+			"id": "8104a505-952a-4a70-862f-76eca4617c44"
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-Api-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "<API Key>",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ac8fea2c-847b-4d83-adbf-f361629f599f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "80e78e95-2936-487d-967f-3ee147b7cd91",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0eead514-3258-40ed-a60f-29704c9c07ad",
+			"key": "baseUrl",
+			"value": "https://3e612ca9-71ed-4302-9e59-efd39149a39c.mock.pstmn.io"
+		}
+	]
+}

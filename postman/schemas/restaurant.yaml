@@ -25,7 +25,6 @@ paths:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/Restaurants"
-
         post:
             summary: "Add a Restaurant"
             operationId: addRestaurant
@@ -51,6 +50,32 @@ paths:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/Restaurant"
+    /restaurant/{id}:
+        get:
+            summary: "Single of Restaurans"
+            operationId: getRestaurants
+            parameters:
+                - name: id
+                  in: path
+                  description: The unique id.
+                  required: true
+                  schema:
+                      type: string
+            tags:
+                - Restaurants
+            responses:
+                "200":
+                    description: "List of Restaurants"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Restaurants"
+                "500":
+                    description: "Errors"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Restaurants"
 
 components:
     schemas:
