@@ -104,28 +104,21 @@ paths:
                                 $ref: "#/components/schemas/Restaurant"
                 "500":
                     description: "Errors"
-        put:
-            summary: "Updte a Restaurant"
-            operationId: updateRestaurant
+        delete:
+            summary: "Delete a Restaurant"
+            operationId: deleteRestaurant
             parameters:
                 - name: id
                   in: path
                   description: The unique id.
                   required: true
                   schema:
-                      type: string
-            requestBody:
-                required: true
-                description: Update Restaurant.
-                content:
-                  application/json:
-                    schema:
-                      $ref: "#/components/schemas/Restaurant"                
+                      type: string              
             tags:
                 - Restaurants
             responses:
                 "204":
-                    description: "Add a restaurant"
+                    description: "Delete a restaurant"
                     content:
                         application/json:
                             schema:
